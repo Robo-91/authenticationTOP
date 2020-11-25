@@ -2,11 +2,36 @@ doctype html
 html
   head
     title= title
+    link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
     link(rel='stylesheet', href='/stylesheets/materialize.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css')
+    
   body
-    block content
+    nav(class="light-blue lighten-1" role="navigation")
+      div(class="nav-wrapper container")
+        a(id="home" class="brand-logo" href="/") Home
+        ul(class="right hide-on-med-and-down")
+          li
+            a(href="secret") Secret Message
+          li
+            a(href="login") Login
+          li
+            a(href="sign-up") Sign Up
+          
+        ul(id="nav-mobile" class="sidenav")
+          li
+            a(href="secret") Secret Message
+          li
+            a(href="login") Login
+          li
+            a(href="sign-up") Sign Up
+        a(href="#" data-target="nav-mobile" class="sidenav-trigger")
+          i(class="material-icons") menu
+
+            
 
     script(src="https://code.jquery.com/jquery-2.1.1.min.js")
     script(src="/javascripts/materialize.min.js")
     script(src="/javascripts/init.js")
+    block content
