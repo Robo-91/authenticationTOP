@@ -2,12 +2,12 @@ const User = require("../models/user");
 
 // login GET
 exports.login = (req, res) => {
-	res.render("login", { title: "login Page" });
+	res.render("login", { title: "Login" });
 };
 
 // login POST
 exports.login_post = (req, res) => {
-	res.render("login", { title: "login Page" });
+	res.render("login", { title: "Login" });
 };
 
 // Signup GET
