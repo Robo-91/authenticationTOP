@@ -4,14 +4,14 @@ block content
   h1= title
 
   div(class="row container")
-    form(class="col s12")
+    form(class="col s12" method="POST")
       div(class="row")
        div(class="input-field col s12")
          input(type="email" name="email" class="validate" id="email")
          label(for="email") Email
       div(class="row")
         div(class="input-field col s12")
-          input(type="password" class="validate" name="validate" id="password")
+          input(type="password" class="validate" name="password" id="password")
           label(for="password") Password
       div(class="row")
         button(class="btn waves-effect waves-light" type="submit" id="submit") Submit
