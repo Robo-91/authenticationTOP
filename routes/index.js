@@ -18,7 +18,7 @@ router.post("/login", userController.login_post);
 router.get("/sign-up", userController.sign_up);
 
 // POST signup
-router.post("/signup", userController.sign_up_post);
+router.post("/sign-up", userController.sign_up_post);
 
 // GET secret message form
 router.get("/secret", messageController.secret_message_get);
