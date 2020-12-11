@@ -1,14 +1,10 @@
 const User = require("../models/user");
 const bcrypt = require("bcryptjs");
 const passport = require("passport");
+const { deleteOne } = require("../models/user");
 
 // login GET
 exports.login = (req, res) => {
-	res.render("login", { title: "Login" });
-};
-
-// login POST
-exports.login_post = (req, res) => {
 	res.render("login", { title: "Login" });
 };
 
@@ -46,6 +42,17 @@ exports.sign_up_post = async (req, res) => {
 	} catch (e) {
 		console.log(e);
 	}
+};
+
+// login POST
+exports.login_post = (req, res, next) => {
+	console.log(req.body.email);
+	console.log(req.body.password);
+	passport.authenticate("local", {
+		successRedirect: "/dashboard",
+		failureRedirect: "/login",
+	})(req, res, next);
+	// res.render("login", { title: "Login" });
 };
 
 // dashboard
