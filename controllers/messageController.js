@@ -1,7 +1,7 @@
 const Message = require("../models/message");
 
 exports.message_list = (req, res) => {
-	res.render("index", { title: "Secret Messages Page" });
+	res.render("index", { title: "Posts" });
 };
 
 // messages home GET Page (dashboard)
