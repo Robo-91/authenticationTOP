@@ -1,5 +1,6 @@
 const User = require("../models/user");
 const bcrypt = require("bcryptjs");
+const passport = require("passport");
 
 // login GET
 exports.login = (req, res) => {
@@ -50,4 +51,10 @@ exports.sign_up_post = async (req, res) => {
 // dashboard
 exports.dashboard = (req, res) => {
 	res.render("dashboard", { title: "Dashboard" });
+};
+
+// logout
+exports.logout = (req, res) => {
+	req.logOut();
+	res.redirect("/login");
 };

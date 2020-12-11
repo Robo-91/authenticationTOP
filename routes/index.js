@@ -32,4 +32,7 @@ router.get("/dashboard", userController.dashboard);
 // POST message (from dashboard)
 router.post("/dashboard", messageController.message_post);
 
+// GET logout
+router.get("/logout", userController.logout);
+
 module.exports = router;
