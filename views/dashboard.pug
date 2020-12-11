@@ -2,5 +2,15 @@ extends layout
 
 block content
   h1= title
+  
+  div(class="row container")
+    form(class="col s12")
+      div(class="row")
+        div(class="input-field col s12")
+          input(id="message" type="text" name="message" class="validate")
+          label(for="firstname") Enter New Message Here
+      div(class="row")
+        button(class="btn waves-effect waves-light" type="submit" id="submit") Submit
+          i(class="material-icons right") send
 
-  a(href='/secret') Submit Secret Message
+  a(href='/secret' class="btn waves-effect waves-light" id="secretmessagelink") Secret Message

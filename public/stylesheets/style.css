@@ -15,3 +15,9 @@ h1 {
 	display: block;
 	margin: auto;
 }
+
+#secretmessagelink {
+	display: block;
+	width: 60%;
+	margin: 5em auto 0 auto;
+}
