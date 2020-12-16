@@ -3,6 +3,7 @@ extends layout
 block content
   a(href="/logout" class="btn waves-effect waves-light" id="logout") Logout
   h1= title
+  p(id="user-name") Welcome #{user.first_name} #{user.last_name}!
   
   div(class="row container")
     form(class="col s12" method="POST")

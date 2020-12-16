@@ -25,3 +25,16 @@ h1 {
 #logout {
 	float: right;
 }
+
+#user-name {
+	text-align: center;
+}
+
+#message-container {
+	text-align: center;
+}
+
+#description {
+	margin: auto;
+	width: 25em;
+}
