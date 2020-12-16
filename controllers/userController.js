@@ -46,18 +46,15 @@ exports.sign_up_post = async (req, res) => {
 
 // login POST
 exports.login_post = (req, res, next) => {
-	console.log(req.body.email);
-	console.log(req.body.password);
 	passport.authenticate("local", {
 		successRedirect: "/dashboard",
 		failureRedirect: "/login",
 	})(req, res, next);
-	// res.render("login", { title: "Login" });
 };
 
 // dashboard
 exports.dashboard = (req, res) => {
-	res.render("dashboard", { title: "Dashboard" });
+	res.render("dashboard", { title: "Dashboard", user: req.user });
 };
 
 // logout
