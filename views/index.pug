@@ -8,5 +8,11 @@ block content
       div(class="divider")
       div(id="description" class="section ")
         h4= message.description
-        p To see the owner of this message, 
-          a(href='/sign-up') Sign Up
+        if currentUser
+          if currentUser.membership_status === true
+            each author in authors
+              if author.id === message.owner.toString()
+                p - #{author.first_name} #{author.last_name}
+          else
+            p To see the owner of this message, type the 
+              a(href='/secret') Secret
