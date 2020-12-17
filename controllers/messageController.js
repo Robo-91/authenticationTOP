@@ -1,5 +1,8 @@
+require("dotenv").config();
 const Message = require("../models/message");
 const User = require("../models/user");
+
+const secretMessage = process.env.SECRET;
 
 exports.message_list = async (req, res) => {
 	try {
@@ -38,6 +41,7 @@ exports.message_post = async (req, res) => {
 
 // secret message page GET
 exports.secret_message_get = (req, res) => {
+	console.log(secretMessage);
 	res.render("secret", { title: "Secret Form" });
 };
 
